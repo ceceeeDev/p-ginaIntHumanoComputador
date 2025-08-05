@@ -1,0 +1,297 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 320px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.login-header {
+  height: 120px;
+  background: linear-gradient(to right, #ffa726, #ffcc80);
+  border-bottom-right-radius: 60px;
+}
+
+.login-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  color: #f7931e;
+  margin-bottom: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f7931e;
+  border-radius: 6px;
+}
+
+.forgot {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.forgot a {
+  color: #666;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.login-form button {
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #e67e00;
+}
+
+.register-link {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link a {
+  color: #f7931e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Asegura que no haya márgenes o padding globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Elimina margen lateral forzado */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra el contenido */
+  justify-content: center;
+}
+
+/* Opcional: container interno para limitar el ancho con centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fefefe;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: #ff8000;
+}
+
+.logo img {
+  width: 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: orange;
+  bottom: -4px;
+  left: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons img {
+  width: 22px;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+/* CONÓCENOS SECTION */
+.conocenos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  background-color: #f4f4f4;
+  gap: 2rem;
+}
+
+.conocenos .texto {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.conocenos h2 {
+  color: #ff8000;
+  font-size: 2rem;
+}
+
+.conocenos p {
+  margin: 1rem 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-ayuda {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #ff8000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.conocenos .imagen {
+  flex: 1 1 300px;
+  max-width: 500px;
+  position: relative;
+}
+
+.conocenos .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.numero-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: orange;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

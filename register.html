@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrarse - Adopt Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-orange-100 to-white relative overflow-hidden">
+
+  <!-- Forma decorativa -->
+  <div class="absolute top-0 left-0 w-72 h-72 bg-orange-200 rounded-full blur-3xl opacity-50 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+  <div class="flex items-center justify-center min-h-screen px-4 z-10 relative">
+    <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-lg text-center">
+
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Regístrate</h2>
+
+      <!-- Formulario -->
+      <form>
+        <input
+          type="text"
+          placeholder="Nombre completo"
+          class="w-full border-b border-gray-300 focus:outline-none focus:border-orange-400 py-3 mb-6 placeholder-gray-500"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Correo electrónico"
+          class="w-full border-b border-gray-300 focus:outline-none focus:border-orange-400 py-3 mb-6 placeholder-gray-500"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Contraseña"
+          class="w-full border-b border-gray-300 focus:outline-none focus:border-orange-400 py-3 mb-6 placeholder-gray-500"
+          required
+        />
+
+        <!-- Botón de registro -->
+        <a href="login.html"
+          class="block bg-orange-400 text-white text-center font-semibold py-3 w-full rounded-full shadow-md hover:bg-orange-500 transition transform hover:scale-105 mb-6">
+          Registrarse
+        </a>
+      </form>
+
+      <!-- Opción de redes -->
+      <p class="text-gray-500 mb-3">o regístrate con</p>
+      <div class="flex justify-center gap-4 mb-6">
+        <img src="assets/icons/google.png" alt="Google" class="w-10 h-10 p-1 bg-white rounded-full shadow-md hover:scale-110 transition" />
+        <img src="assets/icons/facebook.png" alt="Facebook" class="w-10 h-10 p-1 bg-white rounded-full shadow-md hover:scale-110 transition" />
+        <img src="assets/icons/apple.png" alt="Apple" class="w-10 h-10 p-1 bg-white rounded-full shadow-md hover:scale-110 transition" />
+      </div>
+
+      <!-- Enlace de inicio de sesión -->
+      <p class="text-sm text-gray-600">
+        ¿Ya tienes una cuenta?
+        <a href="login.html" class="text-purple-500 font-semibold hover:underline">
+          Inicia sesión aquí
+        </a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones - Adopt Us</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .animate-pulse-custom {
+      animation: pulse 2s infinite;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.08) 0%, rgba(234, 88, 12, 0.04) 100%);
+    }
+    
+    .form-gradient {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.95) 0%, rgba(234, 88, 12, 0.95) 100%);
+    }
+    
+    .input-focus {
+      transition: all 0.3s ease;
+    }
+    
+    .input-focus:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+    }
+    
+    .form-container {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+    
+    .form-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      border-radius: inherit;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+
+  <!-- Navbar dinámica -->
+  <div id="navbar-container"></div>
+
+  <!-- Sección principal -->
+  <section class="hero-gradient flex flex-col items-center text-center px-4 py-16 relative">
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute top-10 left-10 w-24 h-24 bg-orange-200 rounded-full opacity-20 animate-pulse-custom"></div>
+    <div class="absolute bottom-20 right-10 w-16 h-16 bg-orange-300 rounded-full opacity-30 animate-float"></div>
+    <div class="absolute top-1/3 right-1/4 w-12 h-12 bg-orange-100 rounded-full opacity-25 animate-pulse-custom" style="animation-delay: 1s"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-20 h-20 bg-orange-200 rounded-full opacity-15 animate-float" style="animation-delay: 2s"></div>
+    
+    <div class="animate-fadeInUp relative z-10">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        Tú donación <span class="gradient-bg bg-clip-text text-transparent">cambia realidades</span>
+      </h1>
+      <p class="max-w-2xl text-gray-700 mb-12 text-sm sm:text-base leading-relaxed">
+        Ayúdanos a brindar esperanza y cuidado a quienes más lo necesitan en nuestra fundación.
+        Con tu aporte, podemos ofrecer alimento, abrigo y un futuro más digno.
+      </p>
+
+      <!-- Formulario mejorado -->
+      <form class="w-full max-w-4xl form-container p-8 sm:p-12 rounded-2xl shadow-2xl">
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold gradient-bg bg-clip-text text-transparent mb-2">Formulario de Donación</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">Nombres</label>
+            <input type="text" class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 placeholder-orange-100 input-focus font-medium shadow-lg" placeholder="Ingresa tus nombres" />
+          </div>
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">Apellidos</label>
+            <input type="text" class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 placeholder-orange-100 input-focus font-medium shadow-lg" placeholder="Ingresa tus apellidos" />
+          </div>
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">Cédula/Pasaporte</label>
+            <input type="text" class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 placeholder-orange-100 input-focus font-medium shadow-lg" placeholder="ID o pasaporte" />
+          </div>
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">Correo electrónico</label>
+            <input type="email" class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 placeholder-orange-100 input-focus font-medium shadow-lg" placeholder="ejemplo@email.com" />
+          </div>
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">¿Cuánto quieres donar?</label>
+            <input type="number" class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 placeholder-orange-100 input-focus font-medium shadow-lg" placeholder="Monto en USD" />
+          </div>
+          <div class="group">
+            <label class="block text-left text-gray-800 mb-2 font-semibold text-sm uppercase tracking-wide">Elija un método de pago</label>
+            <select class="w-full form-gradient text-white px-6 py-4 rounded-xl focus:outline-none focus:ring-4 focus:ring-orange-300 input-focus font-medium shadow-lg">
+              <option class="bg-white text-gray-800">Tarjeta de crédito</option>
+              <option class="bg-white text-gray-800">Transferencia</option>
+              <option class="bg-white text-gray-800">Paypal</option>
+              <option class="bg-white text-gray-800">Otro</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Botón de envío -->
+        <div class="mt-10">
+          <button type="submit" class="gradient-bg text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-1">
+            Realizar Donación 💝
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Imagen de perros mejorada -->
+  <div class="w-full flex justify-center mt-0 px-4 pb-16 hero-gradient">
+    <div class="relative animate-float">
+      <img
+        src="assets/icons/perros.png"
+        alt="Perros felices"
+        class="relative max-h-60 object-contain"
+      />
+    </div>
+  </div>
+
+  <!-- Script para cargar navbar -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
